@@ -1,3 +1,4 @@
+// Do not touch, David's
 pub struct CPU {
     ir: u16,  // instruction register (actual instruction data)
     mdr: u16, // memory data    register (data  to read/write)
