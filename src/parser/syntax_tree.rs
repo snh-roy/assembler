@@ -1,4 +1,4 @@
-// Do not touch, David's
+// Do not touch, David's, comment on line 28
 
 use std::collections::HashMap;
 
@@ -25,7 +25,7 @@ pub fn scan_sequence(tokens: Vec<Token>) -> Result<Program, TokenError> {
             }
             Token::Opcode(s) => {
                 let count = token_count(s.as_str());
-                let slice = &tokens[pos..pos + count + 1];
+                let slice = &tokens[pos..pos + count + 1]; // why add 1?? is this a pattern in assembly?? 
 
                 let node: Box<dyn LCNode> = match s.as_str() {
                     "ADD" | "AND" => {
