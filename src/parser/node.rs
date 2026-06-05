@@ -2,7 +2,6 @@
 
 use std::fmt::Debug;
 
-
 pub trait LCNode: Debug {
     fn to_binary(&self) -> u16;
 }
@@ -124,7 +123,7 @@ impl LCNode for ArithmeticNode {
         };
 
         let dr = (self.operand1.value as u16) << 9;
-        let sr1 = (self.operand1.value as u16) << 6;
+        let sr1 = (self.operand2.value as u16) << 6;
 
         match &self.operand3 {
             ArithmeticOperand::Register(sr2) => {
