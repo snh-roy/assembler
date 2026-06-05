@@ -234,7 +234,7 @@ impl LCNode for IMemOpNode {
         let offset9 = match &self.offset {
             OffsetType::Integer(imm) => (imm.value as u16) & ((0b1 << 9) - 1),
             OffsetType::Label(label) => {
-                todo!()
+                todo!()                         // not implemented - throw error 
             }
         };
 
@@ -287,7 +287,7 @@ impl JumpNode {
 
 impl LCNode for JumpNode {
     fn to_binary(&self) -> u16 {
-        todo!()
+        todo!()                         // not implemented - throw error 
     }
 }
 
@@ -305,7 +305,7 @@ impl IJumpNode {
 
 impl LCNode for IJumpNode {
     fn to_binary(&self) -> u16 {
-        todo!()
+        todo!()                         // not implemented - throw error 
     }
 }
 
@@ -322,7 +322,7 @@ impl RetNode {
 
 impl LCNode for RetNode {
     fn to_binary(&self) -> u16 {
-        todo!()
+        todo!()                     // not implemented - throw error 
     }
 }
 
@@ -339,6 +339,6 @@ impl RtiNode {
 
 impl LCNode for RtiNode {
     fn to_binary(&self) -> u16 {
-        todo!()
+        todo!()                 // not implemented - throw error 
     }
 }
