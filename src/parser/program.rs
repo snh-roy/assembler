@@ -24,7 +24,14 @@ impl Program {
     }
 
     pub fn to_binary(&mut self) {
-        
+        self.binary.clear();
+        for node in &self.tree {
+            self.binary.push(node.to_binary());
+        }
+    }
+    
+    pub fn get_binary(&self) -> &Vec<u16> {
+        &self.binary
     }
 }
 
